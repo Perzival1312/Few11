@@ -16,7 +16,7 @@
     <p>level: <span id="click-power-level">1</span></p>
 
     <script>
-      let cookieCount = 0;
+      let cookieCount = 100;
       let clickPower = 1;
       let clickPowerPriceAmount = 50;
       let clickPowerLevelNumber = 1;
@@ -29,7 +29,7 @@
 
 
       cookieClicker.addEventListener("click", function() {
-        cookieCount = cookieCount + clickPower;
+        cookieCount += clickPower;
         refreshCookieCount();
       });
 
@@ -37,23 +37,21 @@
         if (cookieCount >= clickPowerPriceAmount) {
           console.log("Item succesfully Bought");
           cookieCount -= clickPowerPriceAmount;
+          clickPower += 1;
           refreshCookieCount();
-          clickPowerLevelNumber += 1;
           refreshPowerClick();
         } else {
           console.log("You don't have enough cookies!");
         }
-        if (cookieCount >= clickPowerPriceAmount) {
-          cookieCount -= clickPowerPriceAmount;
-          refreshCookieCount();
-        }
-      })
+      });
+
       let refreshCookieCount = function() {
         cookieCounter.innerHTML = cookieCount;
-      }
+      };
+
       let refreshPowerClick = function() {
         clickPowerLevel.innterHTML = clickPowerLevelNumber;
-      }
+      };
 
     </script>
   </body>
