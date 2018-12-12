@@ -24,7 +24,6 @@ h3 {
 }
 
 .nav-bar {
-  position: sticky;
   margin-top: calc(100vh - 100px);
   width: 100%;
 }
