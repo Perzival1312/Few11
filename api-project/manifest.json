@@ -1,0 +1,22 @@
+{
+
+  "manifest_version": 2,
+  "name": "FullScreenify",
+  "version": "1.0",
+
+  "description": "makes it so any website can go total fullscreen on Mac OS",
+
+  "icons": {
+    "48": "icons/border-48.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["fullscreenify.js"]
+    }
+  ]
+
+
+
+}
