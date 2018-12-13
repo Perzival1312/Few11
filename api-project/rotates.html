@@ -5,44 +5,6 @@
     <title>api-project</title>
   </head>
   <body>
-
-    <button id="full" onclick="launchIntoFullscreen(document.documentElement);" > fullscreen </button>
-    <button hidden="true" id="notfull" onclick="exitFullscreen();"> exit fullscreen </button>
-
-    <script>
-
-      function launchIntoFullscreen(element) {
-        const fullBtn = document.getElementById("full");
-        const extBtn = document.getElementById("notfull");
-        console.log(extbtn)
-        console.log(fullbtn);
-        if(element.requestFullscreen) {
-          element.requestFullscreen();
-        } else if(element.mozRequestFullScreen) {
-          element.mozRequestFullScreen();
-        } else if(element.webkitRequestFullscreen) {
-          element.webkitRequestFullscreen();
-        } else if(element.msRequestFullscreen) {
-          element.msRequestFullscreen();
-        }
-        fullbtn.setAttribute("hidden", true);
-        extbtn.removeAttribute("hidden");
-      }
-
-      function exitFullscreen() {
-        const fullBtn = document.getElementById("full");
-        const extBtn = document.getElementById("notfull");
-        if(document.exitFullscreen) {
-          document.exitFullscreen();
-        } else if(document.mozCancelFullScreen) {
-          document.mozCancelFullScreen();
-        } else if(document.webkitExitFullscreen) {
-          document.webkitExitFullscreen();
-        }
-        extbtn.setAttribute("hidden", true);
-        fullbtn.removeAttribute("hidden");
-      }
-
-    </script>
+    <script src="fullscreenify.js"></script>
   </body>
 </html>
