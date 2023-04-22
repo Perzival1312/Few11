@@ -28,6 +28,11 @@ h3 {
   width: 100%;
 }
 
+.nav-border {
+  border-style: solid;
+  border-color: #0f0;
+}
+
 .sticky {
   position: sticky;
   top: 0;
@@ -69,7 +74,7 @@ h3 {
 
 .texts {
   color: grey;
-  height: 100vh;
+  height: 75vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
